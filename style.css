@@ -158,11 +158,30 @@ main {
     gap: 28px;
 }
 
+/* Entire card clickable (click overlay) */
 .project-card {
     grid-column: span 6;
     border: 1px solid var(--color-border);
     padding: 20px;
     background: #ffffff;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Overlay full-card anchor */
+.project-card a.project-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* Keep "View case study" clickable too */
+.project-link {
+    position: relative;
+    z-index: 2;
 }
 
 .project-card h3 {
@@ -198,15 +217,31 @@ main {
     color: var(--color-accent);
 }
 
-/* image full bleed inside card */
-.project-image {
-    display: block;
-    width: calc(100% + 40px);
+/* =============================
+   Project Image — 3:2 ratio + hover zoom
+   ============================= */
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
     margin: 14px -20px 10px;
-    height: auto;
+    width: calc(100% + 40px);
 }
 
-/* link */
+.project-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Hover zoom */
+.project-card:hover .project-image {
+    transform: scale(1.04);
+}
+
+/* =============================
+   Project link
+   ============================= */
 .project-link {
     text-decoration: none;
     font-size: 0.83rem;

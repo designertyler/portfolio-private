@@ -13,7 +13,8 @@
     --color-muted: #555;
     --color-link: #0057d9;
     --color-border: #e0e0e0;
-    --color-bg: #ffffff;
+    --color-bg: #f5f5f5;
+    --color-card: #ffffff;
 }
 
 /* =============================
@@ -30,9 +31,23 @@ body {
     margin: 0;
     padding: 40px 20px;
 
+    display: flex;
+    justify-content: center;
+}
+
+main {
     max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    background: var(--color-card);
+    padding: 32px 24px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* If main doesn't exist yet, this keeps things legible anyway */
+body > h1 {
+    max-width: var(--max-width);
+    margin: 40px auto 0;
 }
 
 /* =============================
@@ -42,12 +57,12 @@ body {
 h1, h2, h3 {
     font-weight: 600;
     color: var(--color-text);
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
 h1 {
     font-size: 2rem;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 h2 {
@@ -55,8 +70,8 @@ h2 {
 }
 
 p {
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 ul {
@@ -75,7 +90,7 @@ li {
 a {
     color: var(--color-link);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {
@@ -83,11 +98,11 @@ a:hover {
 }
 
 /* =============================
-   Dividers & Helpers a
+   Dividers & Helpers
    ============================= */
 
 .divider {
-    margin: 40px 0;
+    margin: 32px 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -103,8 +118,12 @@ a:hover {
 
 @media (max-width: 600px) {
     body {
-        padding: 25px 15px;
+        padding: 24px 12px;
         font-size: 16px;
+    }
+
+    main {
+        padding: 24px 18px 32px;
     }
 
     h1 {

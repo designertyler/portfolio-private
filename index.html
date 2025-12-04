@@ -1,214 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Tate – UX Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Tate – UX Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="page">
+  <div class="page">
 
     <!-- HEADER -->
     <header class="site-header">
-        <div class="brand">
-            <div>
-                <h1 class="site-title">Tyler Tate</h1>
-            </div>
+      <div class="brand">
+        <div>
+          <h1 class="site-title">Tyler Tate</h1>
+                    <p class="tagline">Senior UX Designer specializing in shaping complex experiences. Known for clarifying ambiguous
+          problem spaces and creating alignment across engineering, product, and business teams. Experienced
+          with design thinking, structured facilitation, design systems, and user-centered methods to guide
+          cross-functional teams from discovery to execution.</p>
         </div>
+      </div>
 
-        <nav class="site-nav">
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="site-nav">
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <h2>Selected work</h2>
+          <p class="section-subtitle">
+            A mix of enterprise UI, system flows, architecture, and workflow improvements.
+          </p>
+        </div>
 
-        <!-- INTRO -->
-        <section class="intro">
-            <p>
-                Senior UX Designer specializing in shaping complex experiences. Known for clarifying ambiguous
-                problem spaces and creating alignment across engineering, product, and business teams. Experienced
-                with design thinking, structured facilitation, design systems, and user-centered methods to guide
-                cross-functional teams from discovery to execution.
-            </p>
-        </section>
+        <div class="project-grid">
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section">
-            <div class="section-heading">
-                <h2>Selected work</h2>
-                <p class="section-subtitle">
-                    A mix of enterprise UI, system flows, architecture, and workflow improvements.
-                </p>
-            </div>
+          <!-- PROJECT 1 -->
+          <article class="project-card">
+            <a class="project-card-link" href="project-1.html">View project</a>
 
-            <div class="project-grid">
-
-                <!-- PROJECT 1 -->
-                <article class="project-card">
-                    <a class="project-card-link" href="project-1.html">View project</a>
-
-                    <h3>Cloud migration flows</h3>
-                    <p class="project-meta">UX design · Cloud tools</p>
-
-                    <div class="tag-row">
-                        <span class="tag">Cloud</span>
-                        <span class="tag">Migration</span>
-                        <span class="tag">Information architecture</span>
-                    </div>
-
-                    <p>
-                        Redesigning a complex cloud migration workflow to reduce friction and make decision points clearer
-                        for technical and business users.
-                    </p>
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image"
-                             src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                             alt="Cloud migration project thumbnail">
-                    </div>
-
-                    <a class="project-link" href="project-1.html">View case study</a>
-                </article>
-
-                <!-- PROJECT 2 -->
-                <article class="project-card">
-                    <a class="project-card-link" href="project-2.html">View project</a>
-
-                    <h3>Internal tools redesign</h3>
-                    <p class="project-meta">UX design · Admin tools</p>
-
-                    <div class="tag-row">
-                        <span class="tag">Workflows</span>
-                        <span class="tag">Systems</span>
-                        <span class="tag">Efficiency</span>
-                    </div>
-
-                    <p>
-                        Improving discoverability and everyday efficiency for internal admins by reorganizing workflows
-                        and clarifying dense interfaces.
-                    </p>
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image"
-                             src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                             alt="Internal tools redesign thumbnail">
-                    </div>
-
-                    <a class="project-link" href="project-2.html">View case study</a>
-                </article>
-
-                <!-- PROJECT 3 -->
-                <article class="project-card">
-                    <a class="project-card-link" href="project-3.html">View project</a>
-
-                    <h3>Billing platform</h3>
-                    <p class="project-meta">Product design · Commerce</p>
-
-                    <div class="tag-row">
-                        <span class="tag">Enterprise</span>
-                        <span class="tag">Billing</span>
-                        <span class="tag">Scalability</span>
-                    </div>
-
-                    <p>
-                        Defining a scalable information architecture for a multi-product billing system supporting
-                        different offer types, pricing models, and roles.
-                    </p>
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image"
-                             src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                             alt="Billing platform project thumbnail">
-                    </div>
-
-                    <a class="project-link" href="project-3.html">View case study</a>
-                </article>
-
-                <!-- PROJECT 4 -->
-                <article class="project-card">
-                    <a class="project-card-link" href="project-4.html">View project</a>
-
-                    <h3>Design system foundations</h3>
-                    <p class="project-meta">Design systems · Foundations</p>
-
-                    <div class="tag-row">
-                        <span class="tag">Design systems</span>
-                        <span class="tag">Tokens</span>
-                        <span class="tag">Guidelines</span>
-                    </div>
-
-                    <p>
-                        Establishing foundations, patterns, and tokens to create consistent experiences across a suite
-                        of enterprise tools and services.
-                    </p>
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image"
-                             src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                             alt="Design system project thumbnail">
-                    </div>
-
-                    <a class="project-link" href="project-4.html">View case study</a>
-                </article>
-
-                <!-- PROJECT 5 -->
-                <article class="project-card">
-                    <a class="project-card-link" href="project-5.html">View project</a>
-
-                    <h3>Multi-step workflow</h3>
-                    <p class="project-meta">UX design · Workflow</p>
-
-                    <div class="tag-row">
-                        <span class="tag">Research</span>
-                        <span class="tag">Flows</span>
-                        <span class="tag">Iteration</span>
-                    </div>
-
-                    <p>
-                        Restructuring a multi-step workflow to reduce complexity, lower error rates, and shorten the time
-                        it takes teams to complete key tasks.
-                    </p>
-
-                    <div class="project-image-wrapper">
-                        <img class="project-image"
-                             src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                             alt="Workflow project thumbnail">
-                    </div>
-
-                    <a class="project-link" href="project-5.html">View case study</a>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section">
-            <div class="section-heading">
-                <h2>Contact</h2>
-            </div>
+            <h3>Consolidated cloud onboarding</h3>
+            <p class="project-meta">UX design · Cloud tools</p>
 
             <p>
-                <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
-                <a href="https://www.linkedin.com/in/tyler-tate-73567617"
-                   target="_blank"
-                   rel="noopener">
-                    LinkedIn
-                </a>
+              A multi-release initiative to modernize IBM Cloud’s service onboarding.
             </p>
-        </section>
+
+            <div class="project-image-wrapper">
+              <img class="project-image" src="assets/pc_hero.png"
+                alt="Cloud migration project thumbnail">
+            </div>
+
+            <a class="project-link" href="project-1.html">View case study</a>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-card">
+            <a class="project-card-link" href="project-2.html">View project</a>
+
+            <h3>SaaS subscriptions</h3>
+            <p class="project-meta">UX design · Admin tools</p>
+
+
+            <p>
+A cross-business initiative between to define the end-to-end quote-to-cash experience for IBM SaaS subscriptions on IBM Cloud.
+            </p>
+
+            <div class="project-image-wrapper">
+              <img class="project-image" src="assets/skybridge_hero.png"
+                alt="Internal tools redesign thumbnail">
+            </div>
+
+            <a class="project-link" href="project-2.html">View case study</a>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card">
+            <a class="project-card-link" href="project-3.html">View project</a>
+
+            <h3>Coming soon</h3>
+            <p class="project-meta">Product design · Commerce</p>
+
+            <p>
+A project will be here shortly            </p>
+
+            <div class="project-image-wrapper">
+              <img class="project-image" src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
+                alt="Billing platform project thumbnail">
+            </div>
+
+            <a class="project-link" href="project-3.html">View case study</a>
+          </article>
+
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+
+        <p>
+          <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/tyler-tate-73567617" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </p>
+      </section>
 
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 Tyler Tate · Portfolio</p>
+      <p>© 2025 Tyler Tate · Portfolio</p>
     </footer>
 
-</div>
+  </div>
 
 </body>
+
 </html>

@@ -5,13 +5,13 @@
     --font-size: 16px;
     --line-height: 1.7;
 
-    --color-bg: #F2DCC9;   /* warm background */
+    --color-bg: #ffffff;
     --color-surface: #ffffff;
 
-    --color-text: #0D0D0D; /* all body text */
-    --color-muted: #0D0D0D;
+    --color-text: #0D0D0D;
+    --color-muted: #444444;
 
-    --color-accent: #0D0D0D;   /* headings + key accents */
+    --color-accent: #0D0D0D;
     --color-border: #e1e1e1;
 }
 
@@ -29,13 +29,12 @@ body {
     padding: 0;
     background: var(--color-bg);
 
-    /* body: sans-serif that pairs with Palatino */
-    font-family: "Gill Sans", "Segoe UI", system-ui, -apple-system,
-                 BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     color: var(--color-text);
     font-size: var(--font-size);
     line-height: var(--line-height);
+
     display: flex;
     justify-content: center;
 }
@@ -56,24 +55,20 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 24px;
-    border-bottom: 1px solid rgba(13, 13, 13, 0.25); /* softened */
     padding-bottom: 24px;
     margin-bottom: 40px;
 }
 
 .brand {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 8px;
 }
 
-/* Headings: Palatino */
 .site-title {
     margin: 0;
     font-size: 2.6rem;
-    line-height: 1.1;
+    font-weight: 700;
     color: var(--color-accent);
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
 }
 
 .tagline {
@@ -81,7 +76,6 @@ body {
     color: var(--color-muted);
 }
 
-/* nav */
 .site-nav {
     display: flex;
     justify-content: flex-end;
@@ -91,10 +85,11 @@ body {
 
 .site-nav a {
     text-decoration: none;
-    font-size: 0.9rem;
-    color: var(--color-text);
+    font-size: 0.95rem;
+    color: var(--color-muted);
     border-bottom: 2px solid transparent;
-    letter-spacing: 0.04em; /* subtle nav emphasis */
+    letter-spacing: 0.04em;
+    font-weight: 500;
 }
 
 .site-nav a:hover {
@@ -103,7 +98,7 @@ body {
 }
 
 /* =============================
-   Main Grid
+   Layout & Sections
    ============================= */
 main {
     display: grid;
@@ -113,36 +108,38 @@ main {
 
 .intro {
     grid-column: 1 / span 12;
-    max-width: 720px;    /* better line length */
-    margin-bottom: 8px;  /* small breathing room */
+    max-width: 720px;
+    font-size: 1rem;
 }
 
-/* Sections */
 .section {
     grid-column: 1 / span 12;
+    max-width: 840px;
 }
 
+/* Simple single-column section heading (used on home + contact) */
 .section-heading {
-    border-top: 1px solid rgba(13, 13, 13, 0.25); /* softened */
-    padding-top: 10px;
+    border-top: 1px solid rgba(13, 13, 13, 0.25);
+    padding-top: 14px;
+    margin-top: 12px;
+    margin-bottom: 14px;
 }
 
-/* Section headings: Palatino */
 .section-heading h2 {
-    font-size: 1.4rem;
     margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--color-accent);
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
 }
 
 .section-subtitle {
-    margin-top: 6px;
+    margin-top: 4px;
     font-size: 1rem;
-    color: var(--color-text);
+    color: var(--color-muted);
 }
 
 /* =============================
-   Project Cards
+   Project Cards (home page)
    ============================= */
 .project-grid {
     grid-column: 1 / span 12;
@@ -151,7 +148,6 @@ main {
     gap: 28px;
 }
 
-/* Entire card clickable + hover overlay */
 .project-card {
     grid-column: span 6;
     border: 1px solid var(--color-border);
@@ -160,41 +156,38 @@ main {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+        box-shadow 0.18s ease, transform 0.18s ease;
 }
 
 .project-card:hover {
-    background-color: #f5f5f5;
-    border-color: #d5d5d5;
+    background-color: #fafafa;
+    border-color: #d6d6d6;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
 }
 
-/* Full-card click overlay */
+/* Make whole card clickable */
 .project-card a.project-card-link {
     position: absolute;
     inset: 0;
     z-index: 1;
     text-indent: -9999px;
-    overflow: hidden;
 }
 
-/* Visible link above overlay */
-.project-link {
-    position: relative;
-    z-index: 2;
-}
-
-/* Project titles: Palatino in accent color */
 .project-card h3 {
     margin: 0;
-    font-size: 1.2rem;
-    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
     color: var(--color-accent);
 }
 
 .project-meta {
-    margin: 8px 0 8px;
-    font-size: 1rem;
-    color: var(--color-text);
+    margin: 6px 0 10px;
+    font-size: 0.95rem;
+    color: var(--color-muted);
 }
 
 .project-card p {
@@ -203,25 +196,24 @@ main {
     color: var(--color-text);
 }
 
-/* tags */
+/* Tags */
 .tag-row {
-    margin-top: 6px;
-    margin-bottom: 4px; /* added separation before body text */
+    margin-top: 4px;
+    margin-bottom: 6px;
 }
 
 .tag {
     display: inline-block;
-    border: 1px solid var(--color-accent);
-    padding: 2px 6px;
+    border: 1px solid var(--color-border);
+    padding: 4px 8px;
     margin-right: 6px;
     margin-bottom: 4px;
-    font-size: 0.85rem;
-    color: var(--color-text);
+    font-size: 0.82rem;
+    color: var(--color-muted);
+    font-weight: 500;
 }
 
-/* =============================
-   Project Image — 3:1 ratio
-   ============================= */
+/* Thumbnail image (home cards) */
 .project-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -233,16 +225,102 @@ main {
     width: 100%;
     aspect-ratio: 3 / 1;
     object-fit: cover;
+}
+
+/* =============================
+   Case Study Layout (project pages)
+   ============================= */
+
+/* Full-width hero image inside .page */
+.section.full-width-image {
+    max-width: none;
+    grid-column: 1 / span 12;
+    padding: 0;
+}
+
+.full-width-img-wrapper {
+    width: 100%;
+    margin: 0 0 32px;
+    overflow: hidden; /* clips hover zoom */
+    line-height: 0;   /* removes any inline-gap */
+}
+
+.full-width-img-wrapper img {
+    width: 100%;
     height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Two-column section for case studies:
+   meta on left, narrative on right */
+.case-section {
+    max-width: none;
+    grid-column: 1 / span 12;
+    padding: 16px 0 8px;
+    border-top: 1px solid rgba(13, 13, 13, 0.25);
+}
+
+.case-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    column-gap: 40px;
+    max-width: 1080px;
+}
+
+.case-meta-title {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+
+    position: sticky;
+    top: 20px; /* adjust based on your header height */
+    align-self: start;
+}
+
+.page-title {
+    margin: 0 0 8px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+
+    position: sticky;
+    top: 20px; /* adjust based on your header height */
+    align-self: start;
+}
+
+
+.case-meta-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+}
+
+.case-body {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.case-body p {
+    margin: 0 0 12px;
+}
+
+.case-body ul,
+.case-body ol {
+    margin: 8px 0 16px;
+    padding-left: 20px;
 }
 
 /* =============================
    Links
    ============================= */
 .project-link {
+    position: relative;
+    z-index: 2;
+    font-size: 0.95rem;
     text-decoration: underline;
-    font-size: 1rem;
-    color: var(--color-text);
+    color: var(--color-muted);
 }
 
 .project-link:hover {
@@ -250,7 +328,7 @@ main {
 }
 
 a {
-    color: var(--color-text);
+    color: var(--color-muted);
 }
 
 a:hover {
@@ -262,11 +340,11 @@ a:hover {
    ============================= */
 .site-footer {
     grid-column: 1 / span 12;
-    padding-top: 20px;
+    padding-top: 24px;
     margin-top: 40px;
     border-top: 1px solid var(--color-border);
     font-size: 0.9rem;
-    color: var(--color-text);
+    color: var(--color-muted);
 }
 
 /* =============================
@@ -277,16 +355,118 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+    .site-nav {
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+
     main {
         grid-template-columns: repeat(6, 1fr);
     }
 
     .intro,
-    .section {
+    .section,
+    .case-section {
         grid-column: 1 / span 6;
     }
 
     .project-card {
-        grid-column: 1 / span 6; /* full width on narrow layouts */
+        grid-column: 1 / span 6;
     }
+
+    .case-layout {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+}
+
+/* ============================================
+   IMAGE CAPTIONS — FIXED LEFT ALIGNMENT
+   ============================================ */
+
+.fig {
+    margin: 0 0 32px;
+    overflow: hidden; /* clips hover zoom for inline images */
+    line-height: 0;   /* removes any inline-gap below the image */
+}
+
+.fig img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fig-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+    max-width: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Full-width images: caption aligns left under the image */
+.full-width-image .fig-caption {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+}
+
+/* ============================================
+   FULLSCREEN IMAGE OVERLAY
+   ============================================ */
+
+.image-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    padding: 10px;
+}
+
+.image-lightbox-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.clickable-image {
+    cursor: zoom-in;
+}
+
+/* ============================================
+   user quote
+   ============================================ */
+.user-quote {
+    margin: 32px 0;
+    padding-left: 20px;
+    border-left: 3px solid #0D0D0D;
+    font-style: italic;
+    color: #333;
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+.user-quote-small {
+    margin: 32px 0;
+    padding-left: 20px;
+    border-left: 3px solid #0D0D0D;
+    font-style: italic;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.user-quote .quote-source {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-style: normal;
+    color: #666;
 }

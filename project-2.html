@@ -1,66 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2 – Case Study</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software private offers – Case Study · Tyler Tate</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="page">
+  <div class="page">
 
+    <!-- HEADER -->
     <header class="site-header">
-        <div class="brand">
-            <div class="avatar-circle">UX</div>
-            <div>
-                <h1 class="site-title">Your Name</h1>
-                <p class="tagline">UX designer · Selected work</p>
-            </div>
+      <div class="brand">
+        <div>
+          <h1 class="site-title">Tyler Tate</h1>
+          <p class="tagline">Senior UX Designer</p>
         </div>
-        <nav class="site-nav">
-            <a href="index.html#projects">Work</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact</a>
-        </nav>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
-        <section class="section">
-            <div class="section-heading">
-                <h2>Project 2 – Example Case Study</h2>
-            </div>
 
-            <p class="project-meta">Role: UX Designer · Timeline: 2024</p>
+      <!-- TITLE -->
+      <section class="section full-width-image">
+        <h1 class="page-title">Software private offers</h1>
+      </section>
 
-            <h3>Overview</h3>
+      <!-- OVERVIEW -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Overview</h3>
+          </div>
+          <div class="case-body">
             <p>
-                Short overview of the product, who it serves, and why this project mattered.
+              Software private offers (code-named Skybridge) was a cross-business initiative between IBM Cloud and IBM
+              Software
+              to define the end-to-end quote-to-cash experience for IBM SaaS subscriptions on IBM Cloud. The work aimed
+              to preserve
+              software profitability, support seller compensation, and achieve parity with how IBM SaaS is sold on other
+              hyperscalers,
+              while creating a clear model for how subscriptions are ordered, entitled, provisioned, and tracked.
+              My role focused on bringing clarity to this highly complex problem space through workflow mapping,
+              cross-team alignment,
+              and scenario-based UX flows that became reference artifacts for product, engineering, and leadership.
             </p>
 
-            <h3>Problem</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO: full-width image -->
+      <section class="section full-width-image">
+        <div class="fig full-width-img-wrapper">
+          <img class="clickable-image" src="assets/skybridge_hero.png">
+          <p class="fig-caption">
+            Email and catalog page for accepting and assigning a private offer to an account.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROJECT DETAILS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Project details</h3>
+          </div>
+          <div class="case-body">
+            <p>Senior UX Designer, co-leading design</p>
+            <p>Multi-month engagement (discovery and definition)</p>
             <p>
-                Explain the core user and business problems. What was happening before you designed the solution?
+              2 UX designers, 2 product managers, architects and engineering leads from IBM Cloud and IBM Software,
+              pricing and licensing SMEs, seller and partner stakeholders
+            </p>
+            <p>Figma, Mural, Aha!, Slack</p>
+            <p>
+              As a Senior UX Designer, I helped shape the end-to-end experience for private offers spanning IBM Cloud
+              and IBM Software. I mapped existing workflows, identified gaps and opportunities, facilitated working
+              sessions, and designed system-level flows that aligned multiple teams on a single private-offer model. I
+              partnered closely with PMs, architects, and engineers to codify requirements, expose dependencies, and
+              create artifacts that could be used to guide both product strategy and implementation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">The problem</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              IBM Software’s strategy was to sell SaaS subscription entitlements for their products via IBM Cloud—not
+              just as generic
+              cloud spend, but as product-specific commitments that preserve margins and align with SaaS seller
+              compensation. However,
+              the only ordering paths available on IBM Cloud were pay-as-you-go plans, broad platform
+              subscriptions/credits, or
+              manual entitlements. None of these paths met the needs of the Software organization or motivated their
+              sellers to sell on IBM's cloud over other hyperscalers.
             </p>
 
-            <h3>Process</h3>
+            <p>
+              At the same time, IBM needed to offer a quote-to-cash experience for IBM SaaS on IBM Cloud that was at
+              least on par with
+              how those same products are sold on other hyperscalers. Anything less would undermine
+              both the platform
+              and the SaaS portfolio. The lack of a dedicated SaaS subscription model on IBM Cloud also made it
+              difficult to ensure
+              product-level revenue attribution, customer commitment burndown, and seller compensation.
+            </p>
+
+            <p>Key challenges included:</p>
             <ul>
-                <li>Research and discovery (interviews, audits, analytics, etc.).</li>
-                <li>Flows, wireframes, and prototypes to explore directions.</li>
-                <li>Validation and iteration with users and stakeholders.</li>
-                <li>Final design specs, states, and collaboration with engineering.</li>
+              <li>No dedicated SaaS subscription model on IBM Cloud that matched Software’s business needs</li>
+              <li>Existing paths (paygo, generic cloud subscriptions, manual entitlements) could not preserve margins or
+                support SaaS seller compensation</li>
+              <li>Lack of parity with IBM SaaS ordering flows on other hyperscalers</li>
+              <li>No single, unified model for how SaaS subscriptions should burn down against IBM Cloud account
+                commitments</li>
+              <li>Heavy reliance on manual processes that did not scale and made cancellations, renewals, and
+                corrections difficult</li>
             </ul>
 
-            <h3>Outcome</h3>
+            <h4>Business context and goals</h4>
             <p>
-                Summarize impact: reduced errors, increased adoption, faster workflows, or clearer decision-making.
+              From a business perspective, Skybridge needed to:
+            </p>
+            <ul>
+              <li>Preserve software profitability by supporting discrete SaaS commitments instead of relying solely on
+                paygo models</li>
+              <li>Incentivize larger customer commits through subscription and overage structures aligned with Software
+                pricing</li>
+              <li>Ensure product-level revenue attribution for SaaS subscriptions, not just generic platform spend</li>
+              <li>Achieve parity with how IBM SaaS can be ordered on other hyperscalers</li>
+              <li>Align the ordering model with SaaS seller compensation so that catalog orders would not harm seller
+                incentives</li>
+            </ul>
+
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/swimlanes.png">
+                <p class="fig-caption">
+                  Early sketch of the pre-Skybridge landscape, showing disconnected flows. We used swimlanes to
+                  understand the different systems a private offer goes through.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Process</h3>
+          </div>
+          <div class="case-body">
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/skybridge_journey.png">
+                <p class="fig-caption">
+                  As requirements were nailed down, the sketching began to increase in fidelity. Views like this helped
+                  our stakeholders see how the whole system impact's the user's experience. </p>
+              </div>
+            </div>
+
+            <p>
+              With so many systems and organizations involved (Cloud, Software, sellers, partners, billing, usage,
+              entitlement) every UX decision had ripple effects across teams. Ensuring alignment required a level of
+              collaboration that was difficult to achieve under normal circumstances.
             </p>
 
-            <a class="project-link" href="index.html">← Back to portfolio</a>
+            <li>
+              <strong>Regular working sessions</strong><br>
+              One of the biggest wins of the project was securing daily standing calls with busy senior stakeholders.
+              These were highly productive sessions where we clarified requirements, surfaced hidden
+              dependencies, and made rapid decisions that kept the work on track.
+            </li>
+
+
+            <li>
+              <strong>Parity with other hyperscalers</strong><br>
+              Sellers shared a surprising insight that selling IBM Software was often easier on other clouds than on
+              IBM’s
+              own. We conducted a comparative analysis of the private offer flows from leading hyperscalers and used
+              those
+              insights to set the baseline for our experience.
+            </li>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/competitors.png">
+                <p class="fig-caption">
+                  Regular co-creation sessions with architects and PMs helped us deepen our understanding of how
+                  pricing,
+                  contracts, and provisioning systems needed to work together.
+                </p>
+              </div>
+            </div>
+
+            <li>
+              <strong>Understanding technical limitations</strong><br>
+              This project depended on accurately understanding how information moved through the system. Identifying
+              what data the APIs exposed at each stage from quote to offer to subscription to pricing plan was essential
+              for determining what the UI could display and how the experience should be structured.
+            </li>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/api.png">
+                <p class="fig-caption">
+                  Understanding what information we could access through the API and display in the UI.
+                </p>
+              </div>
+            </div>
+
+            <li>
+              <strong>Scenario-based UX flows</strong><br>
+              Created flows for key scenarios such as creating a private offer, revising terms, bundling multiple
+              products, and handling renewals.
+            </li>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/maturity_level.png">
+                <p class="fig-caption">
+                  Scenario flows for seller and partner journeys, used in working sessions to align on states,
+                  responsibilities, and edge cases.
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Outcomes</h3>
+          </div>
+          <div class="case-body">
+            <ul>
+              <li>
+                <strong>Defined a target quote-to-cash model for IBM SaaS subscriptions on IBM Cloud.</strong><br>
+                The Skybridge flows established how SaaS subscriptions should be ordered, entitled, provisioned, and
+                tracked on IBM Cloud.
+              </li>
+              <li>
+                <strong>Aligned Software business needs with Cloud platform capabilities.</strong><br>
+                The unified workflows made it clear where existing Cloud systems could support Software’s subscription
+                and compensation model. Skybridge produced a shared, end-to-end model that both organizations could use from private offer
+                configuration to provisioning.
+              </li>
+
+              <li>
+                <strong>Demonstrated the value of including design early in complex, systems-level work.</strong><br>
+                Skybridge demonstrated how UX can add value well before UI is defined—by clarifying problem spaces,
+                mapping systems, and creating artifacts that enable better strategic decisions.
+              </li>
+
+              <div class="user-quote-small">
+                “Kamil and Tyler were very thorough and absorbed a lot of context and detail to get us to the point
+                where
+                <strong>we are all aligned on the customer UX.</strong>
+
+                They asked great questions consistently and were great about keeping us organized and progressing for
+                the last few months in the face of a very challenging project.”
+                <span class="quote-source"><br>— Principal product manager, IBM Cloud</span>
+              </div>
+
+              <div class="user-quote">
+                “If design makes a difference, then this initiative is indicative of both its value and its validation.”
+                <span class="quote-source">— WW Product Manager, IBM Software</span>
+              </div>
+
+            </ul>
+
+
+          </div>
+        </div>
+
+        <!-- HERO: full-width image -->
+        <section class="section full-width-image">
+          <div class="fig full-width-img-wrapper">
+            <img class="clickable-image" src="assets/skybridge_hero.png">
+          </div>
         </section>
+      </section>
+
+      <!-- CONTACT FOOTER -->
+      <section id="contact" class="section">
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+
+        <p>
+          <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/tyler-tate-73567617" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </p>
+
+      </section>
+
     </main>
 
-</div>
+    <footer class="site-footer">
+      <p>© 2025 Tyler Tate · Portfolio</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.createElement("div");
+      overlay.className = "image-lightbox-overlay";
+
+      const img = document.createElement("img");
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+
+      // Close on click
+      overlay.addEventListener("click", () => {
+        overlay.style.display = "none";
+        img.src = "";
+      });
+
+      // Enable fullscreen on any image with .clickable-image
+      document.querySelectorAll(".clickable-image").forEach(image => {
+        image.addEventListener("click", () => {
+          img.src = image.src;
+          overlay.style.display = "flex";
+        });
+      });
+    });
+  </script>
 
 </body>
+
 </html>

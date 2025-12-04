@@ -1,196 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud migration flows – Case Study · Tyler Tate</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Center migration – Case Study · Tyler Tate</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="page">
+  <div class="page">
 
     <!-- HEADER -->
     <header class="site-header">
-        <div class="brand">
-            <div>
-                <h1 class="site-title">Tyler Tate</h1>
-                <p class="tagline">Senior UX Designer</p>
-            </div>
+      <div class="brand">
+        <div>
+          <h1 class="site-title">Tyler Tate</h1>
+          <p class="tagline">Senior UX Designer</p>
         </div>
+      </div>
 
-        <nav class="site-nav">
-            <a href="index.html">Home</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
 
-        <!-- HERO -->
-        <section class="section">
-            <div class="project-image-wrapper" style="margin-top: 0;">
-                <img class="project-image"
-                     src="assets/Floor-Square-en-rWt2QxfUBxF2UvRz.jpg"
-                     alt="Cloud migration flows hero image">
-            </div>
-        </section>
+<!-- Title -->
+      <section class="section full-width-image">
+            <h1 class="page-title">Consolidated cloud onboarding</h1>
+      </section>
 
-        <!-- TITLE + SUMMARY -->
-        <section class="section">
-            <div class="section-heading">
-                <h2>Cloud migration flows</h2>
-            </div>
+      <!-- OVERVIEW -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Overview</h3>
 
-            <p style="max-width: 720px;">
-                A comprehensive redesign of a multi-step cloud migration workflow to reduce friction,
-                clarify key decision points, and support both technical and business users through a
-                complex transition process.
-            </p>
-        </section>
-
-        <!-- ROLE / DETAILS -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Project details</h2>
-            </div>
-
-            <p><strong>Role:</strong> Lead UX Designer</p>
-            <p><strong>Timeframe:</strong> 12 weeks</p>
-            <p><strong>Team:</strong> 1 PM, 2 engineers, 1 content designer, 1 researcher</p>
-            <p><strong>Tools:</strong> Figma, Mural, Jira, Confluence</p>
-        </section>
-
-        <!-- PROBLEM -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>The problem</h2>
-            </div>
-
+          </div>
+          <div class="case-body">
             <p>
-                The existing cloud migration experience lacked a clear structure and relied heavily
-                on tribal knowledge. Users struggled to understand prerequisites, identify required
-                steps, and determine who needed to complete each part of the process. This resulted in:
+              A multi-release initiative to modernize IBM Cloud’s service onboarding by moving off a legacy tool and
+              into a modern, scalable experience. This work unified previously fragmented workflows, improved compliance
+              alignment, and created a path to retire aging infrastructure. This saved the platform an estimated ~$45K
+              per month while resolving long-standing friction points for both service onboarding teams and first-party
+              approvers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO: full-width image -->
+      <section class="section full-width-image">
+        <div class="fig full-width-img-wrapper">
+          <img class="clickable-image" src="assets/pc_hero.png">
+          <p class="fig-caption">
+            Key screens from the redesigned Partner Center UI.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- PROJECT DETAILS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Project details</h3>
+          </div>
+          <div class="case-body">
+            <p>Senior UX Designer, co-leading design </p>
+            <p>3 years (multi-phase migration)</p>
+            <p>
+              2 product managers, 4 rotating UX designers, 6+ engineers, Ecosystem offering managers,
+              Service Framework focals, Catalog management
+            </p>
+            <p> Figma, Mural, Aha!, Slack</p>
+            <p>As a Senior UX Designer, I guided the UX for the unified onboarding experience. I documented existing
+              workflows, aligned requirements with SMEs, and designed foundational patterns that include the dashboard,
+              lifecycle approvals, IAM flows, navigation, and information architecture. I collaborated across offering
+              management, research, SMEs, and engineering to ensure functional parity, improved usability, and a clear
+              path to retiring the legacy tool.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">The problem</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              The service onboarding experience in IBM Cloud was split across two separate systems: a legacy tool used
+              for first-party services (RMC) and a more modern tool used for third-party offerings (Partner Center).
             </p>
 
+            <p>These systems act as control planes for bringing offerings into the IBM Cloud Catalog by centralizing
+              onboarding tooling and requirements across billing, IAM, and governance and compliance, and enable
+              publishing products to the marketplace.
+              The separation between the two systems created fragmentation across workflows and limited the platform’s
+              ability to scale and adopt new onboarding models.
+            </p>
+
+
+            <div class="user-quote">
+              "...you may have heard of this acquisition. So, these guys want to onboard into the IBM cloud as a 1st
+              party offering. <strong>They saw the service framework, and it has intimidated them to the point of
+                rethinking whether this is
+                a market for them or not.</strong>”
+              <span class="quote-source">— Product manager, user-testing participant</span>
+            </div>
+
+            <p>Key challenges included:</p>
             <ul>
-                <li>High drop-off early in the workflow</li>
-                <li>Frequent support escalations</li>
-                <li>Unclear handoff points between engineering and operations teams</li>
-                <li>Inconsistent success criteria and migration readiness</li>
+              <li>Two different tools and two different mental models for publishing offerings into the IBM Cloud
+                Catalog</li>
+              <li>A legacy system operating on costly, aging infrastructure that was difficult to enhance</li>
+              <li>Limited alignment with current compliance standards and onboarding workflows</li>
+              <li>Minimal visibility for onboarders and approvers into approval status, required actions, or next steps
+              </li>
+              <li>Multiple stakeholder groups (BSS, IAM, security, catalog, ecosystem) each had their own requirements
+                and vocabularies</li>
+              <li>RMC and Partner Center needed to coexist for a period while services migrated in waves</li>
+              <li>Engineering capacity was split across migration work and net-new features such as professional
+                services onboarding</li>
             </ul>
-        </section>
 
-        <!-- CONTEXT -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Context</h2>
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/rmc_before.png">
+                <p class="fig-caption">
+                  RMC and Partner Center before the redesign.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- PROCESS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Process</h3>
+          </div>
+          <div class="case-body">
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/migration_process.png">
+
+              </div>
             </div>
 
             <p>
-                This workflow supports migrations from legacy on-prem environments into a managed cloud
-                offering. Users vary widely—from hands-on engineers to project managers responsible
-                for coordinating multi-team efforts. Research showed that although the needs differ,
-                all users required better visibility into requirements, progress, and dependencies.
+              The migration effort had to serve several audiences simultaneously: service owners (1st and 3rd party)
+              onboarding new products, IBM approvers working through Service Framework pillars, ecosystem partners
+              tracking their go-to-market progress, and end users consuming the services. Any change to onboarding flows
+              could impact dozens of teams and millions in marketplace revenue, so we had to evolve the UX carefully
+              with no disruptions.
             </p>
-        </section>
 
-        <!-- GOALS -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Goals</h2>
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/remaining_pillars.png">
+                <p class="fig-caption">
+                  This project had a large number of stakeholders with their own unique pain points and requirements for sign-off. </p>
+              </div>
             </div>
 
+            <p>
+              Given the number of teams and systems involved, my role focused on driving clarity across the onboarding
+              ecosystem—documenting current workflows, aligning requirements across pillars, and defining the UX
+              patterns needed for a consolidated experience in one tool.
+            </p>
+            <p>This work took shape through the following activities:</p>
+
+            <li>
+              <strong>Mapping the as-is experience</strong><br>
+              Partnered with another designer to document the RMC flows, Service Framework approval journeys, and
+              Partner Center entry points. We used Mural to map end-to-end onboarding journeys for each pillar.
+            </li>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/working_session.png">
+                <p class="fig-caption">
+                  Regular collaborative working sessions allowed us to co-create with our architects and deepen our
+                  understanding of the system we were designing.
+                </p>
+              </div>
+            </div>
+            <li>
+              <strong>Mini-workshops with users</strong><br>
+              Helped plan and facilitate a series of as-is journey map sessions led by our researcher to document pain
+              points, required data, and “must-not-break” behaviors.
+            </li>
+
+            <div class="user-quote-small">
+              "...when we had to refresh it, I had to scramble to figure out how to do it, and it <strong>wasn't
+                intuitive.</strong> We also learned it <strong>hadn't been maintained.
+              </strong> The contact links for the service framework requirements and even the documentation were broken.
+              It was a <strong>huge struggle to release anything</strong> because so much information was unmaintained.”
+              <span class="quote-source">— Release manager, user-testing participant</span>
+            </div>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/pain_points.png">
+                <p class="fig-caption">
+                  Pain points collected from several workshops and organized along an onboarding journey.
+                </p>
+              </div>
+            </div>
+
+            <li>
+              <strong>Defining migration phases</strong><br>
+              With PMs, we framed specific milestones to roll out each capability. Being a part of these conversations
+              early in the planning process ensured the design team had the team we needed to do our best work. Each
+              milestone achieved feature
+              parity in Partner Center for onboarding platform services, then billable services, then professional
+              services, followed by full RMC
+              retirement.
+            </li>
+
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/gantt_chart.png">
+                <p class="fig-caption">
+                  I created this Gantt chart to communicate our design process and help estimate a timeline for our
+                  stakeholders.
+                </p>
+              </div>
+            </div>
+
+            <li>
+              <strong>Designing core patterns</strong><br>
+              Evolved existing key UX patterns such as the onboarding checklist, product dashboard, and navigation to
+              support both first-party and third-party services. We introduced maturity levels to better communicate
+              where a service was in its lifecycle and improved the navigation to be scalable for future enhancements
+              and product types.
+            </li>
+
+
+            <div class="user-quote-small">
+              "So I have to go and check with each pillar, make sure they closed all their issues. ... For simplicity
+              <strong>I'd rather get things more streamlined</strong> than have all the tools everywhere.”
+              <span class="quote-source">— Pillar approver, user-testing participant</span>
+            </div>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/maturity_level.png">
+                <p class="fig-caption">
+                  Users consistently struggled to understand their approval status, maturity level, remaining work, and
+                  updated documentation. The updated checklist and improved pillar-approval presentation resolved these
+                  issues with clearer system status and in-context links to the latest documentation.</p>
+              </div>
+            </div>
+
+            <li>
+              <strong>Hi-fi prototypes and user testing</strong><br>
+              Created Figma prototypes for testing scenarios (new service onboarding, existing RMC-based service
+              migration, lifecycle updates) and validated them with users from our onboarder, approver, and development
+              team personas.
+            </li>
+
+            <div class="user-quote-small">
+              “Based on the amount of time that I spent having to report from our Git repo,
+              to leadership, to the team, and the chasing around, I think <strong>what has been
+                proposed so far will be a huge impact to the reduction of time.</strong>”
+              <span class="quote-source">— Release manager, user-testing participant</span>
+            </div>
+
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/usability_testing.png">
+                <p class="fig-caption">
+                  Usability testing was conducted in several rounds with painpoints and opportunities being tracked as
+                  issues in our team's GitHub repo.
+                </p>
+              </div>
+            </div>
+
+
+            <li>
+              <strong>Iterating from feedback and new feature releases</strong><br>
+              As implementation progressed, we refined copy, state handling, edge cases, and itterated based
+              on user feedback. Once RMC was retired, the team was able to shift to delivering net-new features.
+            </li>
+
+            <!-- image -->
+            <div class="case-body">
+              <div class="fig fig-medium">
+                <img class="clickable-image" src="assets/iam_itteration.png">
+                <p class="fig-caption">
+                  The updated codebase allowed us to quickly ship small usability improvements. For example, fixing an
+                  issue where users couldn’t remove a role if it was the only role for an action would have previously
+                  required a prohibitively time-intensive change. </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Outcomes</h3>
+          </div>
+          <div class="case-body">
             <ul>
-                <li>Create a predictable, structured workflow that reduces confusion</li>
-                <li>Support different users with varying levels of technical expertise</li>
-                <li>Surface prerequisites and dependencies clearly and early</li>
-                <li>Reduce support tickets through a more self-guided experience</li>
+              <li>
+                <strong>New platform services now onboard through Partner Center only.
+
+                </strong><br>
+                New first-party platform services no longer touch RMC, reducing cognitive load for product teams and
+                concentrating enhancements in one tool.
+              </li>
+              <li>
+                <strong>Retired RMC and legacy infrastructure with no service disruption.</strong><br>
+                With migration flows in place, the organization now has a runway to retire
+                the last remaining legacy workloads, unlocking approximately $45,000 per month
+                in infrastructure savings.
+              </li>
+              <li>
+                <strong>Improved visibility into onboarding status.</strong><br>
+                Updated dashboards and checklist patterns give service owners and approvers a shared view of progress,
+                outstanding tasks, and compliance posture.
+              </li>
+              <li>
+                <strong>Modern UI.</strong><br>
+                The interface was updated to align with the latest IBM design system and brand guidelines, transforming
+                the legacy tool’s functionality into a modern, responsive experience.
+              </li>
+              <li>
+                <strong>Reduce onboarding time and frustration for product teams.
+                </strong><br>
+                We took this opportunity to fight for the user’s voice by not only meeting the technical
+                requirements, but also addressing long standing pain points. This resulted in more automation,
+                clearer UI, and positive user feedback.
+              </li>
+              <li>
+                <strong>Enable future enhancements.</strong><br>
+                The redesign was built with scalability and modernization in mind. This made future enhancements
+                easier and faster to deliver.
+              </li>
+              <div class="user-quote">
+                "But I've got to tell you, at a baseline what we are seeing here...<br> <strong>I think it is truly a
+                  quantum leap.</strong>”
+                <span class="quote-source">— Product manager, user-testing participant</span>
+              </div>
+
+
+
             </ul>
-        </section>
+          </div>
+        </div>
 
-        <!-- CONSTRAINTS -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Constraints</h2>
-            </div>
-
-            <ul>
-                <li>Needed to integrate with existing backend APIs and data models</li>
-                <li>Could not change the order of some technical steps</li>
-                <li>Limited engineering capacity during the first two sprints</li>
-                <li>Required alignment across three different product teams</li>
-            </ul>
-        </section>
-
-        <!-- PROCESS -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Process</h2>
-            </div>
-
-            <p>
-                The design process followed an iterative, collaborative structure:
+        <!-- HERO: full-width image -->
+        <section class="section full-width-image">
+          <div class="fig full-width-img-wrapper">
+            <img class="clickable-image" src="assets/pc_hero.png">
+            <p class="fig-caption">
+              Dashboard, onboarding, and deprecation request screens.
             </p>
-
-            <ol>
-                <li><strong>Co-creation sessions</strong> with PM, engineering, and SMEs</li>
-                <li><strong>Mapping current state</strong> to identify friction points and dependencies</li>
-                <li><strong>Workshopping new flows</strong> to consolidate fragmented steps</li>
-                <li><strong>Wireframes and prototypes</strong> tested with internal users</li>
-                <li><strong>Iterating based on feedback</strong> to improve clarity and reduce cognitive load</li>
-            </ol>
+          </div>
         </section>
+      </section>
 
-        <!-- OUTCOMES -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Outcomes</h2>
-            </div>
 
-            <ul>
-                <li>Reduced workflow length from 14 steps to 8 core steps</li>
-                <li>Clearer branching logic for technical vs. business paths</li>
-                <li>Improved visibility into migration status and readiness</li>
-                <li>Support tickets related to migration setup dropped an estimated 28%</li>
-            </ul>
-        </section>
 
-        <!-- NEXT STEPS -->
-        <section class="section" style="max-width: 720px;">
-            <div class="section-heading">
-                <h2>Next steps</h2>
-            </div>
+      <!-- CONTACT FOOTER -->
+      <section id="contact" class="section">
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
 
-            <p>
-                Future improvements include deeper integration with automated validation tools,
-                expanded in-context guidance, and a dashboard for tracking multiple migrations
-                across teams.
-            </p>
-        </section>
+        <p>
+          <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/tyler-tate-73567617" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </p>
 
-        <!-- CONTACT FOOTER -->
-        <section id="contact" class="section">
-            <div class="section-heading">
-                <h2>Contact</h2>
-            </div>
+      </section>
 
-            <p>
-                <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
-                <a href="https://www.linkedin.com/in/tyler-tate-73567617" target="_blank" rel="noopener">
-                    LinkedIn
-                </a>
-            </p>
-        </section>
+
 
     </main>
 
     <footer class="site-footer">
-        <p>© 2025 Tyler Tate · Portfolio</p>
+      <p>© 2025 Tyler Tate · Portfolio</p>
     </footer>
 
-</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.createElement("div");
+      overlay.className = "image-lightbox-overlay";
+
+      const img = document.createElement("img");
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+
+      // Close on click
+      overlay.addEventListener("click", () => {
+        overlay.style.display = "none";
+        img.src = "";
+      });
+
+      // Enable fullscreen on any image with .clickable-image
+      document.querySelectorAll(".clickable-image").forEach(image => {
+        image.addEventListener("click", () => {
+          img.src = image.src;
+          overlay.style.display = "flex";
+        });
+      });
+    });
+  </script>
 
 </body>
+
 </html>

@@ -453,7 +453,7 @@ a:hover {
     .intro,
     .section,
     .case-section {
-        grid-column: 1 / span 6;
+        grid-column: 1 / span 12;
         max-width: 100%;
     }
 

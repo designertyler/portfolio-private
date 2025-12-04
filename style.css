@@ -145,30 +145,20 @@ main {
     grid-column: 1 / span 12;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 28px;
+    gap: 32px;
 }
 
+/* Image-first, simple cards */
 .project-card {
     grid-column: span 6;
-    border: 1px solid var(--color-border);
-    padding: 20px;
-    background: #ffffff;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-
-    transition: background-color 0.18s ease, border-color 0.18s ease,
-        box-shadow 0.18s ease, transform 0.18s ease;
+    padding: 0 0 8px;
+    background: transparent;
+    border: none;
 }
 
-.project-card:hover {
-    background-color: #fafafa;
-    border-color: #d6d6d6;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
-    transform: translateY(-2px);
-}
-
-/* Make whole card clickable */
+/* Full-card click target */
 .project-card a.project-card-link {
     position: absolute;
     inset: 0;
@@ -176,27 +166,77 @@ main {
     text-indent: -9999px;
 }
 
-.project-card h3 {
-    margin: 0;
-    font-size: 2rem;
+/* Image as primary subject */
+/* Image container: fixed aspect ratio so all cards align */
+/* Image-first card layout */
+
+/* Image container: fixed aspect ratio to align all tiles */
+.project-card-image {
+    margin-bottom: 12px;
+    overflow: hidden;
+    line-height: 0;
+
+    aspect-ratio: 16 / 9;
+    width: 100%;
+
+    border-radius: 4px;
+
+    transition: box-shadow 0.35s ease; /* <-- shadow now works */
+}
+
+/* Image behavior */
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.15s ease;
+}
+
+/* Hover: zoom + wrapper shadow */
+.project-card:hover .project-card-image img {
+    transform: scale(1.01);
+}
+
+.project-card:hover .project-card-image {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.058);
+}
+
+/* Text block under image */
+.project-card-content {
+    padding: 8px 4px;
+    transition: background-color 0.25s ease;
+}
+
+.project-card:hover .project-card-content {
+    background-color: #f5f5f5;
+}
+
+
+
+/* Text under image */
+.project-card-title {
+    margin: 0 0 4px;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: normal;
     color: var(--color-accent);
 }
 
 .project-meta {
-    margin: 6px 0 10px;
+    margin: 0 0 4px;
     font-size: 0.95rem;
     color: var(--color-muted);
 }
 
-.project-card p {
-    margin: 12px 0;
-    font-size: 1rem;
+.project-summary {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
     color: var(--color-text);
 }
 
-/* Tags */
+/* (Legacy tag styles – not used now, safe to keep or delete) */
 .tag-row {
     margin-top: 4px;
     margin-bottom: 6px;
@@ -213,7 +253,7 @@ main {
     font-weight: 500;
 }
 
-/* Thumbnail image (home cards) */
+/* Legacy thumbnail wrapper (if still used elsewhere) */
 .project-image-wrapper {
     position: relative;
     overflow: hidden;
@@ -241,7 +281,7 @@ main {
 .full-width-img-wrapper {
     width: 100%;
     margin: 0 0 32px;
-    overflow: hidden; /* clips hover zoom */
+    overflow: hidden;
     line-height: 0;   /* removes any inline-gap */
 }
 
@@ -289,7 +329,6 @@ main {
     top: 20px; /* adjust based on your header height */
     align-self: start;
 }
-
 
 .case-meta-text {
     margin: 0;
@@ -350,6 +389,33 @@ a:hover {
 /* =============================
    Responsive
    ============================= */
+
+/* Medium breakpoint: narrow desktop / tablet */
+@media (max-width: 1100px) {
+
+    .page {
+        padding: 32px 20px;
+        margin: 16px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        grid-column: 1 / -1;   /* full width of the grid */
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-image-wrapper {
+        margin: 12px 0 10px;
+        width: 100%;
+    }
+}
+
 @media (max-width: 860px) {
     .site-header {
         grid-template-columns: 1fr;
@@ -386,7 +452,7 @@ a:hover {
 
 .fig {
     margin: 0 0 32px;
-    overflow: hidden; /* clips hover zoom for inline images */
+    overflow: hidden; /* clips any future hover zoom for inline images */
     line-height: 0;   /* removes any inline-gap below the image */
 }
 
@@ -470,3 +536,4 @@ a:hover {
     font-style: normal;
     color: #666;
 }
+

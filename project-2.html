@@ -15,20 +15,20 @@
   <div class="page">
 
     <!-- HEADER -->
-<header class="site-header">
+    <header class="site-header">
 
-    <!-- Left-aligned name that behaves like a nav link -->
-    <nav class="site-nav site-nav-left">
+      <!-- Left-aligned name that behaves like a nav link -->
+      <nav class="site-nav site-nav-left">
         <a href="index.html" class="site-title-link">Tyler Tate</a>
-    </nav>
+      </nav>
 
-    <!-- Right side nav -->
-    <nav class="site-nav">
+      <!-- Right side nav -->
+      <nav class="site-nav">
         <a href="index.html">Work</a>
         <a href="#contact">Contact</a>
-    </nav>
+      </nav>
 
-</header>
+    </header>
 
     <main>
 
@@ -37,7 +37,7 @@
         <h1 class="page-title">Software private offers</h1>
       </section>
 
-      <!-- OVERVIEW -->
+      <!-- OVERVIEW (unchanged) -->
       <section class="case-section">
         <div class="case-layout">
           <div class="case-meta">
@@ -61,7 +61,7 @@
         </div>
       </section>
 
-      <!-- HERO: full-width image -->
+      <!-- HERO: full-width image (unchanged) -->
       <section class="section full-width-image">
         <div class="fig full-width-img-wrapper">
           <img class="clickable-image" src="assets/skybridge_hero.png">
@@ -71,7 +71,7 @@
         </div>
       </section>
 
-      <!-- PROJECT DETAILS -->
+      <!-- PROJECT DETAILS (unchanged) -->
       <section class="case-section">
         <div class="case-layout">
           <div class="case-meta">
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <!-- PROBLEM -->
+      <!-- THE PROBLEM (narrative) -->
       <section class="case-section">
         <div class="case-layout">
           <div class="case-meta">
@@ -106,53 +106,21 @@
             <p>
               IBM Software’s strategy was to sell SaaS subscription entitlements for their products via IBM Cloud—not
               just as generic
-              cloud spend, but as product-specific commitments that preserve margins and align with SaaS seller
-              compensation. However,
-              the only ordering paths available on IBM Cloud were pay-as-you-go plans, broad platform
-              subscriptions/credits, or
-              manual entitlements. None of these paths met the needs of the Software organization or motivated their
-              sellers to sell on IBM's cloud over other hyperscalers.
+              cloud spend, but as product-specific commitments that preserved margins and aligned with SaaS seller
+              compensation. On paper, that sounded straightforward. In practice, IBM Cloud only supported a patchwork
+              of ordering paths: pay-as-you-go plans, broad platform subscriptions/credits, or manual entitlements.
             </p>
 
             <p>
-              At the same time, IBM needed to offer a quote-to-cash experience for IBM SaaS on IBM Cloud that was at
-              least on par with
-              how those same products are sold on other hyperscalers. Anything less would undermine
-              both the platform
-              and the SaaS portfolio. The lack of a dedicated SaaS subscription model on IBM Cloud also made it
-              difficult to ensure
-              product-level revenue attribution, customer commitment burndown, and seller compensation.
+              IBM needed a quote-to-cash experience for IBM SaaS on IBM Cloud that was at least on
+              par with how those same products were being sold on other hyperscalers and none of those paths really
+              worked for Software. Pay-as-you-go models didn’t protect profitability or
+              reflect the way SaaS commitments are negotiated. Generic credits hid product-level revenue. Manual
+              entitlements didn’t scale and made even simple operations—like renewals or corrections—painful and risky.
             </p>
 
-            <p>Key challenges included:</p>
-            <ul>
-              <li>No dedicated SaaS subscription model on IBM Cloud that matched Software’s business needs</li>
-              <li>Existing paths (paygo, generic cloud subscriptions, manual entitlements) could not preserve margins or
-                support SaaS seller compensation</li>
-              <li>Lack of parity with IBM SaaS ordering flows on other hyperscalers</li>
-              <li>No single, unified model for how SaaS subscriptions should burn down against IBM Cloud account
-                commitments</li>
-              <li>Heavy reliance on manual processes that did not scale and made cancellations, renewals, and
-                corrections difficult</li>
-            </ul>
 
-            <h4>Business context and goals</h4>
-            <p>
-              From a business perspective, Skybridge needed to:
-            </p>
-            <ul>
-              <li>Preserve software profitability by supporting discrete SaaS commitments instead of relying solely on
-                paygo models</li>
-              <li>Incentivize larger customer commits through subscription and overage structures aligned with Software
-                pricing</li>
-              <li>Ensure product-level revenue attribution for SaaS subscriptions, not just generic platform spend</li>
-              <li>Achieve parity with how IBM SaaS can be ordered on other hyperscalers</li>
-              <li>Align the ordering model with SaaS seller compensation so that catalog orders would not harm seller
-                incentives</li>
-            </ul>
-
-
-            <!-- image -->
+            <!-- image: swimlanes -->
             <div class="case-body">
               <div class="fig fig-medium">
                 <img class="clickable-image" src="assets/swimlanes.png">
@@ -163,52 +131,76 @@
               </div>
             </div>
 
+            <p>
+              When we started mapping the current-state of the quote-to-cash flow, it became clear we needed to do more
+              than “add
+              a UI” on top.
+            </p>
+
+            <p>
+              We had to define a unified subscription model that: </p>
+            <ul>
+              <li>Preserved software profitability by supporting discrete SaaS commitments instead of relying solely on
+                paygo models</li>
+              <li>Incentivized larger customer commits through subscription and overage structures aligned with Software
+                pricing</li>
+              <li>Ensured product-level revenue attribution for SaaS subscriptions, not just generic platform spend</li>
+              <li>Achieved parity with how IBM SaaS can be ordered on other hyperscalers</li>
+              <li>Aligns the ordering model with SaaS seller compensation so that catalog orders would not harm seller
+                incentives</li>
+            </ul>
+
           </div>
         </div>
       </section>
 
-      <!-- PROCESS -->
+      <!-- PROCESS (narrative) -->
       <section class="case-section">
         <div class="case-layout">
           <div class="case-meta">
             <h3 class="case-meta-title">Process</h3>
           </div>
           <div class="case-body">
+            <p>
+              With so many systems, users, and organizations involved, every UX decision carried downstream
+              consequences. A label change in the UI might require a
+              change in a contract template; a new field in a flow might require API behavior to be revisited. The
+              design work had to operate at a system level, not just at the screen level.
+            </p>
 
-            <!-- image -->
+            <!-- image: journey / system view -->
             <div class="case-body">
               <div class="fig fig-medium">
                 <img class="clickable-image" src="assets/skybridge_journey.png">
                 <p class="fig-caption">
                   As requirements were nailed down, the sketching began to increase in fidelity. Views like this helped
-                  our stakeholders see how the whole system impact's the user's experience. </p>
+                  our stakeholders see how the whole system impact's the user's experience.
+                </p>
               </div>
             </div>
 
             <p>
-              With so many systems and organizations involved (Cloud, Software, sellers, partners, billing, usage,
-              entitlement) every UX decision had ripple effects across teams. Ensuring alignment required a level of
-              collaboration that was difficult to achieve under normal circumstances.
+              A big part of my role was creating shared understanding by visualizing the system so everyone—whether from
+              Software, Cloud, billing, or sales—could see how their work fit into the bigger picture. That work showed
+              up in a few key ways:
             </p>
 
-            <li>
-              <strong>Regular working sessions</strong><br>
+            <h4>Regular working sessions</h4>
+            <p>
               One of the biggest wins of the project was securing daily standing calls with busy senior stakeholders.
-              These were highly productive sessions where we clarified requirements, surfaced hidden
-              dependencies, and made rapid decisions that kept the work on track.
-            </li>
+              These weren’t status meetings—they were working sessions. We clarified requirements, surfaced hidden
+              dependencies, and made design and product decisions in real time, instead of waiting weeks for alignment.
+            </p>
 
+            <h4>Parity with other hyperscalers</h4>
+            <p>
+              Sellers shared a surprising insight: selling IBM Software was often easier on other clouds than on IBM’s
+              own. To understand why, we conducted a comparative analysis of private offer flows from leading
+              hyperscalers and used those findings to set our baseline. If IBM Cloud couldn’t at least match those
+              experiences, it would always be fighting uphill.
+            </p>
 
-            <li>
-              <strong>Parity with other hyperscalers</strong><br>
-              Sellers shared a surprising insight that selling IBM Software was often easier on other clouds than on
-              IBM’s
-              own. We conducted a comparative analysis of the private offer flows from leading hyperscalers and used
-              those
-              insights to set the baseline for our experience.
-            </li>
-
-            <!-- image -->
+            <!-- image: competitors / co-creation -->
             <div class="case-body">
               <div class="fig fig-medium">
                 <img class="clickable-image" src="assets/competitors.png">
@@ -220,14 +212,15 @@
               </div>
             </div>
 
-            <li>
-              <strong>Understanding technical limitations</strong><br>
-              This project depended on accurately understanding how information moved through the system. Identifying
-              what data the APIs exposed at each stage from quote to offer to subscription to pricing plan was essential
-              for determining what the UI could display and how the experience should be structured.
-            </li>
+            <h4>Understanding technical limitations</h4>
+            <p>
+              The UX we could deliver was tightly coupled to what the underlying systems exposed. We spent time mapping
+              how information moved from quote, to offer, to subscription, to pricing plan—and what data the APIs made
+              available at each step. That understanding was critical when deciding what the UI could responsibly
+              display and when we needed to introduce new states or constraints.
+            </p>
 
-            <!-- image -->
+            <!-- image: API details -->
             <div class="case-body">
               <div class="fig fig-medium">
                 <img class="clickable-image" src="assets/api.png">
@@ -237,24 +230,45 @@
               </div>
             </div>
 
-            <li>
-              <strong>Scenario-based UX flows</strong><br>
-              Created flows for key scenarios such as creating a private offer, revising terms, bundling multiple
-              products, and handling renewals.
-            </li>
-
+            <h4>Scenario-based UX flows</h4>
+            <p>
+              Once we had the building blocks, we shifted to scenario-based flows: creating a private offer, revising
+              terms mid-contract, bundling multiple products, or handling renewals. These flows became alignment tools
+              as much as design artifacts—they showed, step by step, how systems and users interacted in realistic
+              situations, and gave teams a concrete reference when making tradeoffs.
+            </p>
 
           </div>
         </div>
       </section>
 
-      <!-- OUTCOMES -->
+      <!-- OUTCOMES (narrative) -->
       <section class="case-section">
         <div class="case-layout">
           <div class="case-meta">
             <h3 class="case-meta-title">Outcomes</h3>
           </div>
           <div class="case-body">
+            <p>
+              By the end of the engagement, Skybridge had defined a clear target quote-to-cash model for IBM SaaS
+              subscriptions on IBM Cloud. Instead of stitching together paygo, generic credits, and manual workarounds,
+              teams now had a single model for how subscriptions should be ordered, entitled, provisioned, and tracked.
+            </p>
+
+            <p>
+              The unified workflows made it clear where existing Cloud systems could support Software’s subscription and
+              compensation model, and where new capabilities were needed. Skybridge produced a shared, end-to-end model
+              that both organizations could use—from private offer configuration, through acceptance, to provisioning
+              and usage.
+            </p>
+
+            <p>
+              Just as importantly, the work demonstrated how bringing design into complex, systems-level work early can
+              change the trajectory of a project. The flows, diagrams, and scenarios we created weren’t just
+              “deliverables”;
+              they became reference points for architects, PMs, and leaders making strategic decisions.
+            </p>
+
             <ul>
               <li>
                 <strong>Defined a target quote-to-cash model for IBM SaaS subscriptions on IBM Cloud.</strong><br>
@@ -264,38 +278,35 @@
               <li>
                 <strong>Aligned Software business needs with Cloud platform capabilities.</strong><br>
                 The unified workflows made it clear where existing Cloud systems could support Software’s subscription
-                and compensation model. Skybridge produced a shared, end-to-end model that both organizations could use from private offer
-                configuration to provisioning.
+                and compensation model. Skybridge produced a shared, end-to-end model that both organizations could use
+                from private offer configuration to provisioning.
               </li>
-
               <li>
                 <strong>Demonstrated the value of including design early in complex, systems-level work.</strong><br>
                 Skybridge demonstrated how UX can add value well before UI is defined—by clarifying problem spaces,
                 mapping systems, and creating artifacts that enable better strategic decisions.
               </li>
-
-              <div class="user-quote-small">
-                “Kamil and Tyler were very thorough and absorbed a lot of context and detail to get us to the point
-                where
-                <strong>we are all aligned on the customer UX.</strong>
-
-                They asked great questions consistently and were great about keeping us organized and progressing for
-                the last few months in the face of a very challenging project.”
-                <span class="quote-source"><br>— Principal product manager, IBM Cloud</span>
-              </div>
-
-              <div class="user-quote">
-                “If design makes a difference, then this initiative is indicative of both its value and its validation.”
-                <span class="quote-source">— WW Product Manager, IBM Software</span>
-              </div>
-
             </ul>
 
+            <div class="user-quote-small">
+              “Kamil and Tyler were very thorough and absorbed a lot of context and detail to get us to the point
+              where
+              <strong>we are all aligned on the customer UX.</strong>
+
+              They asked great questions consistently and were great about keeping us organized and progressing for
+              the last few months in the face of a very challenging project.”
+              <span class="quote-source"><br>— Principal product manager, IBM Cloud</span>
+            </div>
+
+            <div class="user-quote">
+              “If design makes a difference, then this initiative is indicative of both its value and its validation.”
+              <span class="quote-source">— WW Product Manager, IBM Software</span>
+            </div>
 
           </div>
         </div>
 
-        <!-- HERO: full-width image -->
+        <!-- SUPPORTING HERO / SUMMARY IMAGE (unchanged, still used) -->
         <section class="section full-width-image">
           <div class="fig full-width-img-wrapper">
             <img class="clickable-image" src="assets/skybridge_hero.png">

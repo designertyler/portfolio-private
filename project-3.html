@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree view – Case Study · Tyler Tate</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+      <!-- Left-aligned name that behaves like a nav link -->
+      <nav class="site-nav site-nav-left">
+        <a href="index.html" class="site-title-link">Home / Tyler Tate</a>
+      </nav>
+
+    </header>
+
+    <main>
+
+      <!-- Title -->
+      <section class="section full-width-image">
+        <h1 class="page-title">Tree View</h1>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Overview</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              Tree View was one of the first new components added to the Carbon Design System’s core library.
+              It emerged from a real customer need: teams across IBM were asking users to navigate large hierarchies of
+              data, but Carbon had no native way to support that pattern.
+            </p>
+            <p>
+              I led the UX work to define the component, from initial discovery and requirements gathering through
+              interaction design, visual design, accessibility alignment, documentation, and design kit support. The
+              result was a
+              standards-based, community-driven component that gave product teams a reliable way to build accessible
+              data trees while reducing duplicated effort and ad-hoc implementations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HERO IMAGE -->
+      <section class="section full-width-image">
+        <div class="fig full-width-img-wrapper">
+          <img class="clickable-image" src="assets/treeview_hero.png" alt="Tree View component in Carbon">
+          <p class="fig-caption">
+            Tree View in the Carbon Design System showing nested nodes and design specifications.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROJECT DETAILS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Project details</h3>
+          </div>
+          <div class="case-body">
+            <p><strong>Role: </strong>UX Designer</p>
+            <p><strong>Timeframe:</strong> ~1 year of active design and iteration</p>
+            <p>
+              <strong>Team:</strong> 1 UX designer (me), 1 front-end engineer,
+              Carbon design leadership, contributing designers from Carbon's community
+            </p>
+            <p>
+              As the primary designer for Tree View, I defined the UX, interaction model, and visual design for one of
+              Carbon’s first major new components. I worked closely with engineering to translate WAI-ARIA standards
+              into practical behaviors and partnered with the Accessibility Guild to ensure AA compliance. I documented
+              requirements openly with the community, collaborated across teams, and delivered the final specifications
+              and experimental Sketch library used for early validation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEXT: HOW IT STARTED -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Context</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              This work began not with a roadmap, but with a placeholder GitHub issue I opened during a client
+              workshop. The client relied heavily on hierarchical navigation and lacked a Carbon component that could
+              support their product.
+            </p>
+            <p>The issue gained interest internally and externally. When people started sharing their solutions, we
+              realized that our users were filling a gap in our library by hacking together similar components or
+              creating it from scratch.
+            </p>
+
+
+            <div class="fig fig-medium">
+              <img class="clickable-image" src="assets/treeview_github_issue.png" alt="GitHub issue for Tree View">
+              <p class="fig-caption">
+                Community discussion around the need for the tree view component.
+              </p>
+            </div>
+
+            <p>
+              It became obvious that teams were solving the same problem in different ways. There was no shared
+              standard, no common behavior model, and no guarantee that any of these implementations met accessibility
+              expectations. It was a clear signal that Carbon needed to step in with a well-defined, reusable solution.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH & REQUIREMENTS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Research & requirements</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              I began by auditing existing examples across IBM products and in-flight designs. Some teams used hacked
+              accordions, some built their own trees from scratch, and others were still trying to decide how to model
+              their data with Carbon's existing components. Alongside that audit, I studied W3C guidance on Tree View
+              and related patterns.
+            </p>
+
+
+            <div class="fig fig-medium">
+              <img class="clickable-image" src="assets/treeview_requirements.png"
+                alt="Tree View interaction and states">
+              <p class="fig-caption">
+                Soliciting feedback from internal teams.
+              </p>
+            </div>
+
+            <p>
+              To make sense of the feedback, I documented user needs in two layers. First, the needs of the
+              end user interacting with the tree and then the team implementing the tree View.
+            </p>
+
+            <div class="user-quote-small">
+              <p><strong>As an end user I need to...</strong></p>
+              <ul>
+                ...
+                <li>Open a parent node without it taking selection so I can keep my current selection in view while I
+                  open/close other nodes in the tree.</li>
+                <li>Collapse a parent with a selected child without the parent taking the selection state to avoid
+                  accidental selection change.</li>
+                <li>See which node is selected even if the parent node is collapsed so I know when a hidden child is
+                  selected (Parent node inherits the selected state?)</li>
+                ...
+              </ul>
+            </div>
+            <div class="user-quote-small">
+              <p><strong>As a product team implementing a data tree, I need to...</strong></p>
+              <ul>
+                ...
+                <li>Have the option to represent the node's file type by an icon so the user can understand the node's
+                  file type.</li>
+                <li>Have the option to not use a file type icon when the file type is not important for my data.</li>
+                <li>Show a node as disabled so the user knows it cannot be active.</li>
+              </ul>
+              ...
+            </div>
+            <p>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCESSIBILITY & INTERACTION -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Accessibility & interaction</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              Accessibility was not an afterthought. The ARIA Tree pattern defines how focus should move, how
+              expand and collapse work, how type-ahead behaves, and how screen readers should interpret the structure.
+              I worked closely with our engineering partner to translate these rules into specific interaction
+              details for Carbon.
+            </p>
+            <p>
+            <div class="user-quote-small">
+
+              <strong>ARIA keyboard and mouse behaviors for tree view
+                so the user's expectations are consistent for other trees.</strong>
+              </p>
+              ...
+              <p><strong>Right arrow</strong><br>
+                When focus is on a closed node, opens the node; focus does not move.<br>
+                When focus is on an open node, moves focus to the first child node.<br>
+                When focus is on an end node, does nothing.</p>
+
+              <p><strong>Left arrow</strong><br>
+                When focus is on an open node, closes the node.<br>
+                When focus is on a child node that is also either an end node or a closed node, moves focus to its
+                parent
+                node.<br>
+                When focus is on a root node that is also either an end node or a closed node, does nothing.</p>
+
+              <p><strong>Down Arrow</strong><br>
+                Moves focus to the next node that is focusable without opening or closing a node.</p>
+              ...
+            </div>
+
+            <div class="fig fig-medium">
+              <img class="clickable-image" src="assets/treeview_states.png" alt="Tree View interaction and states">
+              <p class="fig-caption">
+                Interaction and state specifications for focus, hover, selection, and expansion, with notes tied back
+                to W3C ARIA Tree guidance.
+              </p>
+            </div>
+
+            <p>
+              Documenting these details helped ensure that every implementation behaved consistently and that teams
+              adopting the component did not have to rediscover accessibility best practices on their own.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN, ITERATION & OPEN COLLABORATION -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Designing in the open</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              All of the design explorations were shared and discussed in the open on GitHub. That included directions
+              that we chose not to pursue: different grouping treatments, alternative expand indicators, and visual
+              patterns inspired by other IBM products and external tools.
+            </p>
+
+            <p>
+              By keeping work visible, we gave designers and engineers a chance to react early, request capabilities,
+              and understand why certain choices were made. It also created a paper trail that future contributors
+              could reference when proposing enhancements.
+            </p>
+
+            <div class="fig fig-medium">
+              <img class="clickable-image" src="assets/treeview_explorations.png" alt="Tree View visual explorations">
+              <p class="fig-caption">
+                Visual explorations for how we might visually show child nodes under an expanded parent node for icon
+                and non-icon versions as well as how to be the most efficient with space.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LAUNCH, DOCS, AND DESIGN KITS -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Launch & documentation</h3>
+          </div>
+          <div class="case-body">
+            <p>
+              Tree View initially launched as an experimental component. This gave us room to collaborate with real teams and their products,
+              gather feedback, and itterate before releasing the final version in the Carbon library.
+            </p>
+            <p>
+              To support adoption, I created:
+            </p>
+            <ul>
+              <li>A dedicated Sketch kit for the Gray 10 theme</li>
+              <li>Usage documentation for the Carbon website, including do/don’t guidance</li>
+              <li>Examples showing variants with and without file-type icons</li>
+              <li>Notes for future enhancements such as multi-select, drag and drop, and advanced batch actions</li>
+            </ul>
+
+            <div class="fig fig-medium">
+              <img class="clickable-image" src="assets/treeview_docs.png" alt="Tree View usage documentation">
+              <p class="fig-caption">
+                Documentation for Tree View on the Carbon website, including guidance on when to use it,
+                keyboard behavior, and accessibility considerations.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="case-section">
+        <div class="case-layout">
+          <div class="case-meta">
+            <h3 class="case-meta-title">Outcomes</h3>
+          </div>
+          <div class="case-body">
+            <ul>
+              <div class="user-quote">
+                “...excellence is unknown at IBM by and large. How to get to excellence is unknown at IBM by and
+                large. I think this presentation today is <strong>a really interesting case study of how you get to
+                  excellence.</strong>”
+                <span class="quote-source"><br>— Phil Gilbert, Head of Design at IBM</span>
+              </div>
+              <li>
+                <strong>A core Carbon component for hierarchical data.</strong><br>
+                Tree View gave IBM Cloud and IBM Software teams a standard, accessible way to represent nested
+                information without reinventing the pattern in each product.
+              </li>
+              <li>
+                <strong>Reduced design and engineering duplication.</strong><br>
+                Teams could stop building one-off trees and instead focus on the domain problems they were solving, not
+                the underlying widget.
+              </li>
+              <li>
+                <strong>Improved accessibility and consistency.</strong><br>
+                Aligning with W3C ARIA Tree guidance ensured that keyboard and screen reader experiences were
+                predictable
+                across implementations.
+              </li>
+              <li>
+                <strong>A model for community-driven components.</strong><br>
+                The open GitHub process, audits, and recorded playback helped establish a pattern for how Carbon could
+                handle future complex components.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- HERO IMAGE -->
+        <section class="section full-width-image">
+          <div class="fig full-width-img-wrapper">
+            <img class="clickable-image" src="assets/treeview_hero.png" alt="Tree View component in Carbon">
+          </div>
+
+          <a href="index.html" class="site-title-link">Back</a>
+
+        </section>
+
+      </section>
+
+      <!-- CONTACT FOOTER -->
+      <section id="contact" class="section">
+        <div class="section-heading">
+          <h2>Contact</h2>
+        </div>
+
+        <p>
+          <a href="mailto:trtate@gmail.com">trtate@gmail.com</a><br>
+          <a href="https://www.linkedin.com/in/designertyler" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Tyler Tate · Portfolio</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.createElement("div");
+      overlay.className = "image-lightbox-overlay";
+
+      const img = document.createElement("img");
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", () => {
+        overlay.style.display = "none";
+        img.src = "";
+      });
+
+      document.querySelectorAll(".clickable-image").forEach(image => {
+        image.addEventListener("click", () => {
+          img.src = image.src;
+          overlay.style.display = "flex";
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

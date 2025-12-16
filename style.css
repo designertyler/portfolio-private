@@ -9,7 +9,7 @@
     --color-surface: #f9f8f7;
 
     --color-text: #0D0D0D;
-    --color-muted: #634B44;
+    --color-muted: #2e2d2d;
 
     --color-accent: #F24429;
     --color-border: #e1e1e1;
@@ -221,7 +221,7 @@ main {
 
 /* Hover interactions: zoom ONLY (no shadow) */
 .project-card:hover .project-card-image img {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 /* Only change text color on hover */
